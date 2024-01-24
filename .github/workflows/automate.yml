@@ -1,5 +1,9 @@
 name: React ci/cd
-on: workflow_dispatch 
+on: 
+  workflow_dispatch: 
+  push:
+    branches:
+      - 'main'
 
 jobs:
   Run-test: 
