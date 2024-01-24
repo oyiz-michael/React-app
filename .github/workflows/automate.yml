@@ -19,6 +19,7 @@ jobs:
             npm run test
 
   Build:
+    needs: [Run-test]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout/Getcode
@@ -39,3 +40,10 @@ jobs:
         with: 
           name: Build-Artifact
           path: ./dist
+
+  Deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: deploy
+        run: echo "deploying..."
+    
