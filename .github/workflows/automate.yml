@@ -4,7 +4,13 @@ jobs:
   Run-test: 
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout/Getcode
+        uses: actions/checkout@v4.1.1
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.1
+
       - name: Run ci test
         run: |
             npm install 
-            npm run 
+            npm run test
