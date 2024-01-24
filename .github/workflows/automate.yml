@@ -1,4 +1,6 @@
 name: React ci/cd
+run-name: Automate react ci/cd
+
 on: 
   workflow_dispatch: 
   push:
